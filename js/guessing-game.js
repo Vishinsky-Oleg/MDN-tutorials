@@ -73,3 +73,44 @@ function resetGame() {
     randomNumber = Math.floor(Math.random() * 100) + 1;
 }
 
+let shopping = ['bread', 'milk', 'cheese', 'hummus', 'noodles'];
+
+let sequence = [1, 1, 2, 3, 5, 8, 13];
+for (let i = 0; i < sequence.length; i++) {
+    if (sequence[i]) {
+        console.log(sequence[i]);
+    } 
+}
+
+const list = document.querySelector('.output ul');
+const totalBox = document.querySelector('.output p');
+let total = 0;
+list.innerHTML = '';
+totalBox.textContent = '';
+// number 1
+'Underpants:6.99'
+'Socks:5.99'
+'T-shirt:14.99'
+'Trousers:31.99'
+'Shoes:23.99';
+let products = ['Underpants:6.99',
+    'Socks:5.99',
+    'T-shirt:14.99',
+    'Trousers:31.99',
+    'Shoes:23.99'];
+for (let i = 0; i <= product.length; i++) { // number 2
+    // number 3
+    products[i] = products[i].split(':');
+    // number 4
+    products[i][1] = Number(products[i][1]);
+    // number 5
+    let itemText = 0;
+    total += products[i][1];
+    total = 15;
+
+    const listItem = document.createElement('li');
+    listItem.textContent = itemText;
+    list.appendChild(listItem);
+}
+
+totalBox.textContent = 'Total: $' + total.toFixed(2);

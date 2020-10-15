@@ -36,3 +36,20 @@ let a = admitted.textContent;
 a = a.replace(a.slice(a.length - 2), '.');
 refused.textContent = refused.textContent.replace(refused.textContent[admitted.textContent.length - 1], '.');
 
+
+
+let names = ['Chris', 'Li Kang', 'Anne', 'Francesca', 'Mustafa', 'Tina', 'Bert', 'Jada']
+let para = document.createElement('p');
+
+// Add your code here
+function randNum(x,y) {
+    let seq = [];
+    for (let i = x; i <= y; i++) {
+        seq.push(i);
+    }
+}
+// Don't edit the code below here!
+
+section.innerHTML = ' ';
+
+section.appendChild(para);

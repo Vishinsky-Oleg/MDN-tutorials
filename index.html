@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Loops: Task 3</title>
+    <title>Events: Task 3</title>
     <style>
         p {
             color: purple;
@@ -13,6 +13,15 @@
         * {
             box-sizing: border-box;
         }
+
+        button {
+            display: block;
+            margin: 20px 0 20px 20px;
+        }
+
+        .button-bar {
+            padding: 20px 0;
+        }
     </style>
     <link rel="stylesheet" href="../styles.css" />
 </head>
@@ -20,39 +29,28 @@
 <body>
 
     <section class="preview">
-
-
-
     </section>
+
+    <div class="button-bar">
+        <button data-color="red">Red</button>
+        <button data-color="yellow">Yellow</button>
+        <button data-color="green">Green</button>
+        <button data-color="purple">Purple</button>
+    </div>
 
 </body>
 <script>
-    let i = 500;
-    let para = document.createElement('p');
 
-    function isPrime(num) {
-        for (let i = 2; i < num; i++) {
-            if (num % i === 0) {
-                return false;
-            }
-        }
+    let buttonBar = document.querySelector('.button-bar');
+    let btns = document.querySelectorAll('button');
+    btns.forEach(btn => {
+        btn.addEventListener('click', function () {
+            buttonBar.style.background = btn.getAttribute('data-color');
+        })
+    });
+    
+  // Add your code here
 
-        return true;
-    }
-
-    while (i > 0) {
-        if (isPrime(i)) {
-            para.textContent += i + ' ';
-        }
-        i--;
-    }
-
-    // Add your code here
-
-
-    // Don't edit the code below here!
-    let section = document.querySelector('section');
-    section.appendChild(para);
 </script>
 
 </html>

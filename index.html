@@ -1,56 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="utf-8" />
-    <title>Events: Task 3</title>
-    <style>
-        p {
-            color: purple;
-            margin: 0.5em 0;
-        }
-
-        * {
-            box-sizing: border-box;
-        }
-
-        button {
-            display: block;
-            margin: 20px 0 20px 20px;
-        }
-
-        .button-bar {
-            padding: 20px 0;
-        }
-    </style>
-    <link rel="stylesheet" href="../styles.css" />
+    <meta charset="utf-8">
+    <title>Bouncing balls</title>
+    <link rel="stylesheet" href="./css/obp.css">
 </head>
 
 <body>
-
-    <section class="preview">
-    </section>
-
-    <div class="button-bar">
-        <button data-color="red">Red</button>
-        <button data-color="yellow">Yellow</button>
-        <button data-color="green">Green</button>
-        <button data-color="purple">Purple</button>
-    </div>
+    <h1>bouncing balls</h1>
+    <p class="one"></p>
+    <canvas></canvas>
+    
+    <script src="./js/obp.js"></script>
 
 </body>
-<script>
-
-    let buttonBar = document.querySelector('.button-bar');
-    let btns = document.querySelectorAll('button');
-    btns.forEach(btn => {
-        btn.addEventListener('click', function () {
-            buttonBar.style.background = btn.getAttribute('data-color');
-        })
-    });
-    
-  // Add your code here
-
-</script>
 
 </html>

@@ -1,51 +1,97 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
 
 <head>
     <meta charset="utf-8">
-    <title>Mapquest example</title>
-    <style>
-        #map {
-            width: 600px;
-            height: 600px;
-        }
-    </style>
-    <script src="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.js"></script>
-    <link type="text/css" rel="stylesheet" href="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.css" />
-    <script>
-        // 1. The basic part of the example
-        var L;
-
-        window.onload = function () {
-            L.mapquest.key = 'YOUR-API-KEY-HERE';
-
-
-            // 'map' refers to a <div> element with the ID map
-            var map = L.mapquest.map('map', {
-                center: [53.480759, -2.242631],
-                layers: L.mapquest.tileLayer('map'),
-                zoom: 12
-            });
-            map.addControl(L.mapquest.control({ position: 'bottomright' }));
-            L.marker([53.480759, -2.242631], {
-                icon: L.mapquest.icons.marker({
-                    primaryColor: '#22407F',
-                    secondaryColor: '#3B5998',
-                    shadow: true,
-                    size: 'md',
-                    symbol: 'A'
-                })
-            })
-                .bindPopup('This is Manchester!')
-                .addTo(map);
-        }
-    </script>
+    <title>My test page</title>
+    <link rel="stylesheet" href="./css/payment-form.css">
 </head>
 
 <body>
-    <h1>Simple Mapquest example</h1>
-
-    <div id="map"></div>
+    <p>This is my page</p>
+    <form action="">
+        <h1>Payment form</h1>
+        <p>Required fields are followed by <strong><abbr title="required">*</abbr></strong>.</p>
+        <section>
+            <h2>Contact information</h2>
+            <fieldset>
+                <legend>Title</legend>
+                <ul>
+                    <li>
+                        <label for="title_1">
+                            <input type="radio" id="title_1" name="title" value="K">
+                            King
+                        </label>
+                    </li>
+                    <li>
+                        <label for="title_2">
+                            <input type="radio" id="title_2" name="title" value="Q">
+                            Queen
+                        </label>
+                    </li>
+                    <li>
+                        <label for="title_3">
+                            <input type="radio" id="title_3" name="title" value="J">
+                            Joker
+                        </label>
+                    </li>
+                </ul>
+            </fieldset>
+            <p>
+              <label for="name">
+                <span>Name: </span>
+                <strong><abbr title="required">*</abbr></strong>
+              </label>
+              <input type="text" id="name" name="username">
+            </p>
+            <p>
+                <label for="mail">
+                <span>E-mail: </span>
+                <strong><abbr title="required">*</abbr></strong>
+              </label>
+              <input typ
+              e="email" id="mail" name="usermail">
+            </p>
+            <p>
+              <label for="pwd">
+                <span>Password: </span>
+                <strong><abbr title="required">*</abbr></strong>
+              </label>
+              <input type="password" id="pwd" name="password">
+            </p>
+        </section>
+        <section>
+            <h2>Payment information</h2>
+            <p>
+              <label for="card">
+                <span>Card type:</span>
+              </label>
+              <select id="card" name="usercard">
+                <option value="visa">Visa</option>
+                <option value="mc">Mastercard</option>
+                <option value="amex">American Express</option>
+              </select>
+            </p>
+            <p>
+              <label for="number">
+                <span>Card number:</span>
+                <strong><abbr title="required">*</abbr></strong>
+              </label>
+              <input type="tel" id="number" name="cardnumber">
+            </p>
+            <p>
+              <label for="date">
+                <span>Expiration date:</span>
+                <strong><abbr title="required">*</abbr></strong>
+                <em>formatted as mm/dd/yyyy</em>
+              </label>
+              <input type="date" id="date" name="expiration">
+            </p>
+        </section>
+        <p> <button type="submit">Validate the payment</button> </p>
+    </form>
 </body>
-
+<label for="pwd">ID</label><input type="text" id="comment" name="comment" placeholder="Your ID">
+<label for="pwd">Password</label><input type="password" id="pwd" name="pwd" placeholder="Your password">
+<button type="submit">Submit</button>
 </html>
